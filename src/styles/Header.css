@@ -1,0 +1,18 @@
+.space {
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.color1 {
+  background-color: brown;
+  color: #d65c24;
+}
+
+.color2 {
+  background-color: #d65c24;
+}
+
+.carousel-item > img {
+  max-width: 100%;
+  max-height: 500px;
+}
