@@ -1,6 +1,13 @@
 import React from "react";
 
 function SignIn() {
+  const onEmailChange = (event) => {
+    console.log(event.target.value);
+  };
+  const onPasswordChange = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
       <main className="pa4 black-80">
@@ -12,7 +19,7 @@ function SignIn() {
                 Email
               </label>
               <input
-                onChange={() => {}}
+                onChange={onEmailChange}
                 className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                 type="email"
                 name="email-address"
@@ -24,7 +31,7 @@ function SignIn() {
                 Password
               </label>
               <input
-                onChange={() => {}}
+                onChange={onPasswordChange}
                 className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                 type="password"
                 name="password"
