@@ -1,17 +1,12 @@
 import "./App.css";
-import MyCard from "./components/Card";
-import MyCarousel from "./components/Carousel";
-import Header1 from "./components/Header1";
-import Header2 from "./components/Header2";
+import { BrowserRouter } from "react-router-dom";
+import View from "./views/View";
 
 function App() {
   return (
-    <div className="App">
-      <Header1 />
-      <Header2 />
-      <MyCarousel />
-      <MyCard />
-    </div>
+    <BrowserRouter>
+      <View />
+    </BrowserRouter>
   );
 }
 

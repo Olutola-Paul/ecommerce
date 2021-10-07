@@ -11,17 +11,20 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
   InputGroup,
   Input,
   Button,
 } from "reactstrap";
 import "../styles/Header.css";
+import SignIn from "./SignIn";
 
 const Header1 = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const signin = () => {
+    <SignIn />;
+  };
 
   return (
     <div className="space color1">
@@ -54,7 +57,8 @@ const Header1 = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavLink href="/signin">Sign In</NavLink>
+          <NavLink href="/register">Register</NavLink>
         </Collapse>
       </Navbar>
     </div>
