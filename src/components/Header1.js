@@ -16,20 +16,18 @@ import {
   Button,
 } from "reactstrap";
 import "../styles/Header.css";
-import SignIn from "./SignIn";
 
 const Header1 = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const signin = () => {
-    <SignIn />;
-  };
 
   return (
-    <div className="space color1">
-      <Navbar dark expand="md" style={{ width: "100%" }}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <div className="space">
+      <Navbar light expand="md" style={{ width: "100%" }}>
+        <NavbarBrand href="/home" className="mx-auto">
+          <img src="/assets/images/Logo2.png" alt="Buy online" />
+        </NavbarBrand>
         <InputGroup style={{ width: "40%" }}>
           <Input placeholder="username" />
           <Button color="success">Search</Button>
@@ -57,8 +55,16 @@ const Header1 = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavLink href="/signin">Sign In</NavLink>
-          <NavLink href="/register">Register</NavLink>
+          <NavLink href="/signin">
+            <button style={{ color: "white" }} className="btn btn-warning">
+              Sign In
+            </button>
+          </NavLink>
+          <NavLink href="/register">
+            <button style={{ color: "white" }} className="btn btn-success">
+              Register
+            </button>
+          </NavLink>
         </Collapse>
       </Navbar>
     </div>
